@@ -1,0 +1,39 @@
+<% include header %>
+
+<h1>Fashionscene</h1>
+
+<hr>
+
+<nav>
+  <% for (var i = 0; i < categorieen.length; i++) { %>
+    <a href="/categorieen/<%- i %>"><%- categorieen[i] %></a>
+  <% } %>
+</nav>
+
+<hr>
+<br>
+
+
+  <% var teller = 1; %>
+  <% nieuws.forEach(function(item){ %>
+    <section>
+        <h2>
+          <a href=/items/<%- item.id %>><%- item.titel %></a>
+        </h2>
+        <div class="homepagepicture">
+        <img src="/img/<%- item.afbeeldings %>" alt="<%- item.titel %>">
+      </div>
+
+
+
+    </section>
+
+
+     <a  href= /items/<%- item.id %> >READ MORE</a>
+
+
+    <hr>
+    <% teller++;}); %>
+
+
+<% include footer %>
